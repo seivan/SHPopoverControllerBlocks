@@ -10,6 +10,7 @@ The blocks are automatically removed once they SHPopoverControllerBlocks is gone
 
 #### [Properties](https://github.com/seivan/SHPopoverControllerBlocks#properties-1)
 
+#### [Usage](https://github.com/seivan/SHPopoverControllerBlocks#usage-1)
 
 Installation
 ------------
