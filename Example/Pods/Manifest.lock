@@ -1,9 +1,11 @@
 PODS:
   - SHBarButtonItemBlocks (1.0.0)
+  - SHControlBlocks (1.0.1)
   - SHPopoverControllerBlocks (1.0.0)
 
 DEPENDENCIES:
   - SHBarButtonItemBlocks
+  - SHControlBlocks
   - SHPopoverControllerBlocks (from `../`)
 
 EXTERNAL SOURCES:
@@ -12,6 +14,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SHBarButtonItemBlocks: 246b4aa50ceeb7d99a855ede99dd00fd95d85e0d
+  SHControlBlocks: 3cd5cb4e8a127e416da89569ea0d5156a9e09c19
   SHPopoverControllerBlocks: 9f38823f4529da30d39ed7e4a30320aeade44d42
 
 COCOAPODS: 0.22.2

@@ -1,3 +1,4 @@
 platform :ios, '6.0' 
 pod 'SHPopoverControllerBlocks', :path => '../'
 pod 'SHBarButtonItemBlocks'
+pod 'SHControlBlocks'
