@@ -1,21 +1,22 @@
-SHNavigationControllerBlocks
+SHPopoverControllerBlocks
 ==========
 
 Overview
 --------
-Life cycle blocks for UINavigationController - willShow and didShow. 
-The blocks are automatically removed once they UINavigationController is gone, so it isn't necessary to clean up - Swizzle Free(™)
+Life cycle blocks for SHPopoverControllerBlocks - shouldDismiss and didDismiss. 
+The blocks are automatically removed once they SHPopoverControllerBlocks is gone, so it isn't necessary to clean up - Swizzle Free(™)
 
 ### API
 
-#### [Properties](https://github.com/seivan/SHNavigationControllerBlocks#properties-1)
+#### [Properties](https://github.com/seivan/SHPopoverControllerBlocks#properties-1)
 
+#### [Usage](https://github.com/seivan/SHPopoverControllerBlocks#usage-1)
 
 Installation
 ------------
 
 ```ruby
-pod 'SHNavigationControllerBlocks'
+pod 'SHPopoverControllerBlocks'
 ```
 
 ***
@@ -26,11 +27,11 @@ Setup
 Put this either in specific files or your project prefix file
 
 ```objective-c
-#import "UINavigationController+SHNavigationControllerBlocks.h"
+#import "UIPopoverController+SHPopoverControllerBlocks.h"
 ```
 or
 ```objective-c
-#import "SHNavigationControllerBlocks.h"
+#import "SHPopoverControllerBlocks.h"
 ```
 
 API
@@ -39,44 +40,60 @@ API
 ### Properties
 
 ```objective-c
-
 #pragma mark -
 #pragma mark Block Def
+typedef BOOL (^SHPopverControllerShouldDismissBlock)(UIPopoverController * thePopoverController);
+typedef void (^SHPopverControllerDidDismissBlock)(UIPopoverController * thePopoverController);
 
-typedef void (^SHNavigationControllerBlock)(UINavigationController * theNavigationController,
-                                            UIViewController       * theViewController,
-                                            BOOL                      isAnimated);
+@interface UIPopoverController (SHPopoverControllerBlocks)
 
-                                            
+
 #pragma mark -
 #pragma mark Properties
 
 #pragma mark -
 #pragma mark Setters
 
--(void)SH_setWillShowViewControllerBlock:(SHNavigationControllerBlock)theBlock;
+-(void)SH_setShouldDismissPopoverBlock:(SHPopverControllerShouldDismissBlock)theBlock;
 
--(void)SH_setDidShowViewControllerBlock:(SHNavigationControllerBlock)theBlock;
+-(void)SH_setDidDismissPopoverBlock:(SHPopverControllerDidDismissBlock)theBlock;
 
 #pragma mark -
 #pragma mark Getters
 
-@property(nonatomic,readonly) SHNavigationControllerBlock SH_blockWillShowViewController;
-@property(nonatomic,readonly) SHNavigationControllerBlock SH_blockDidShowViewController;
+@property(nonatomic,readonly) SHPopverControllerShouldDismissBlock SH_blockShouldDismissPopoverBlock;
+@property(nonatomic,readonly) SHPopverControllerDidDismissBlock    SH_blockDidDismissPopoverBlock;
+@end
+```
+
+### Usage
+
+```objective-c
+  [self.popController SH_setShouldDismissPopoverBlock:^BOOL(UIPopoverController *thePopoverController) {
+    testShouldDismiss = YES;
+    dispatch_semaphore_signal(semaphoreShouldDismiss);
+    return YES;
+  }];
+  
+  [self.popController SH_setDidDismissPopoverBlock:^(UIPopoverController *thePopoverController) {
+    testDidDismiss = YES;
+    dispatch_semaphore_signal(semaphoreDidDismiss);
+  }];
+
 ```
 
 
 Contact
 -------
 
-If you end up using SHNavigationControllerBlocks in a project, I'd love to hear about it.
+If you end up using SHPopoverControllerBlocks in a project, I'd love to hear about it.
 
 email: [seivan.heidari@icloud.com](mailto:seivan.heidari@icloud.com)  
 twitter: [@seivanheidari](https://twitter.com/seivanheidari)
 
 ## License
 
-SHNavigationControllerBlocks is © 2013 [Seivan](http://www.github.com/seivan) and may be freely
+SHPopoverControllerBlocks is © 2013 [Seivan](http://www.github.com/seivan) and may be freely
 distributed under the [MIT license](http://opensource.org/licenses/MIT).
-See the [`LICENSE.md`](https://github.com/seivan/SHNavigationControllerBlocks/blob/master/LICENSE.md) file.
+See the [`LICENSE.md`](https://github.com/seivan/SHPopoverControllerBlocks/blob/master/LICENSE.md) file.
 

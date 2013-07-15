@@ -6,15 +6,21 @@
 // project.
 
 
-// SHMessageUIBlocks
-#define COCOAPODS_POD_AVAILABLE_SHMessageUIBlocks
-#define COCOAPODS_VERSION_MAJOR_SHMessageUIBlocks 1
-#define COCOAPODS_VERSION_MINOR_SHMessageUIBlocks 0
-#define COCOAPODS_VERSION_PATCH_SHMessageUIBlocks 0
+// SHBarButtonItemBlocks
+#define COCOAPODS_POD_AVAILABLE_SHBarButtonItemBlocks
+#define COCOAPODS_VERSION_MAJOR_SHBarButtonItemBlocks 1
+#define COCOAPODS_VERSION_MINOR_SHBarButtonItemBlocks 0
+#define COCOAPODS_VERSION_PATCH_SHBarButtonItemBlocks 0
 
-// SHNavigationControllerBlocks
-#define COCOAPODS_POD_AVAILABLE_SHNavigationControllerBlocks
-#define COCOAPODS_VERSION_MAJOR_SHNavigationControllerBlocks 1
-#define COCOAPODS_VERSION_MINOR_SHNavigationControllerBlocks 0
-#define COCOAPODS_VERSION_PATCH_SHNavigationControllerBlocks 0
+// SHControlBlocks
+#define COCOAPODS_POD_AVAILABLE_SHControlBlocks
+#define COCOAPODS_VERSION_MAJOR_SHControlBlocks 1
+#define COCOAPODS_VERSION_MINOR_SHControlBlocks 0
+#define COCOAPODS_VERSION_PATCH_SHControlBlocks 1
+
+// SHPopoverControllerBlocks
+#define COCOAPODS_POD_AVAILABLE_SHPopoverControllerBlocks
+#define COCOAPODS_VERSION_MAJOR_SHPopoverControllerBlocks 1
+#define COCOAPODS_VERSION_MINOR_SHPopoverControllerBlocks 0
+#define COCOAPODS_VERSION_PATCH_SHPopoverControllerBlocks 0
 
