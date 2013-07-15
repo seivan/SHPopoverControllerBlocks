@@ -66,7 +66,7 @@
     SHBlockAssert(testShouldDismiss, @"testShouldDismiss should be YES");
     
     dispatch_semaphore_wait(semaphoreDidDismiss, DISPATCH_TIME_FOREVER);
-    SHBlockAssert(testDidDismiss, @"testDidDismissw should be YES");
+    SHBlockAssert(testDidDismiss, @"testDidDismiss should be YES");
     
     self.popController = nil;
   });
