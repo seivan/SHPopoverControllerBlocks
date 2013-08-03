@@ -1,0 +1,7 @@
+language: objective-c
+xcode_workspace: Example/Example.xcworkspace
+xcode_scheme: Example
+xcode_sdk: iphonesimulator
+xcode_simulator: ipad
+
+xctool -workspace Example.xcworkspace -scheme Example build test -simulator ipad -sdk iphonesimulator
