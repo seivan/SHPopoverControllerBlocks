@@ -46,7 +46,6 @@
 }
 
 
-
 -(void)testHasNoSH_blockDidDismissPopoverBlock; {
   STAssertNil(self.popoverController.SH_blockDidDismissPopoverBlock, nil);
 }
