@@ -1,8 +1,10 @@
 SHPopoverControllerBlocks
 ==========
 
-(Travis-CI does currently not support iPad for integration tests, run the tests on your desktop) 
+(Travis-CI does currently not support iPad for integration tests, run the tests on your desktop)
+
 It should work once Travis-CI updates to --HEAD xctool. 
+
 xctool -workspace Example.xcworkspace -scheme Example build test -simulator ipad -sdk iphonesimulator
 
 [![Build Status](https://travis-ci.org/seivan/SHPopoverControllerBlocks.png?branch=master)](https://travis-ci.org/seivan/SHPopoverControllerBlocks)
