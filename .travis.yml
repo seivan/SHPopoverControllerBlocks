@@ -5,5 +5,5 @@ xcode_sdk: iphonesimulator
 xcode_simulator: ipad
 
 before_install:
-  - "brew install xctool --HEAD"
+  - "brew upgrade xctool --HEAD"
   - "brew link xctool"
