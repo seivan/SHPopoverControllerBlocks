@@ -3,3 +3,7 @@ xcode_workspace: Example/Example.xcworkspace
 xcode_scheme: Example
 xcode_sdk: iphonesimulator
 xcode_simulator: ipad
+
+before_install:
+  - "brew install xctool --HEAD"
+  - "brew link xctool"
