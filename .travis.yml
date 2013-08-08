@@ -2,6 +2,9 @@ language: objective-c
 xcode_workspace: Example/Example.xcworkspace
 xcode_scheme: Example
 xcode_sdk: iphonesimulator
-xcode_simulator: ipad
+xctool_args: -simulator ipad
 
-xctool -workspace Example.xcworkspace -scheme Example build test -simulator ipad -sdk iphonesimulator
+before_install:
+  - "brew unlink xctool"
+  - "brew install xctool --HEAD"
+  - "brew link xctool"
