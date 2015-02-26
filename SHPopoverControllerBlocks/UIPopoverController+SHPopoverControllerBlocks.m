@@ -11,7 +11,7 @@ static NSString * const SH_blockDidDismissPopoverBlock    = @"SH_blockDidDismiss
 
 
 @interface SHPopoverControllerBlockManager : NSObject
-<UINavigationControllerDelegate>
+<UINavigationControllerDelegate, NSFileManagerDelegate>
 
 @property(nonatomic,strong)   NSMapTable   * mapBlocks;
 +(instancetype)sharedManager;
