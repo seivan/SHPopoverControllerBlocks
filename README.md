@@ -1,3 +1,6 @@
+Deprecated, please use [RxCocoa](https://github.com/ReactiveX/RxSwift) 
+
+
 SHPopoverControllerBlocks
 ==========
 [![CI Status](https://img.shields.io/travis/seivan/SHPopoverControllerBlocks.svg?style=flat)](https://travis-ci.org/seivan/SHPopoverControllerBlocks)
